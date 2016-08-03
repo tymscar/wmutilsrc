@@ -1,0 +1,7 @@
+#!/bin/bash
+win="$(lsw)"
+if [[ $win ]]; then
+	hsetroot -fill $HOME/wall.jpg -blur 15
+else
+	hsetroot -fill $HOME/wall.jpg -blur 15
+fi

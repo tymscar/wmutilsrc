@@ -1,0 +1,26 @@
+alt + i
+	rofi -show run
+
+# move windows around
+alt + {h,j,k,l}
+	wmv {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+#resize windows
+alt + shift + {h,j,k,l}
+	wrs {-20 0, 0 20, 0 -20, 20 0} $(pfw)
+
+# focus window after position 
+ctrl + {h,j,k,l}
+	~/.config/sxhkd/.scripts/focus $(~/.config/sxhkd/.scripts/vroum {h, j, k, l})
+
+# move windows to center
+alt + g
+	~/contrib/center.sh
+
+# fullscreen
+alt + f
+	~/.config/sxhkd/.scripts/fullscreen $(pfw)
+
+# close window
+alt + w
+	killwa $(pfw)
